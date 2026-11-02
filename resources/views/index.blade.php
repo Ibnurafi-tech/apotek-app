@@ -19,7 +19,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm py-3">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/"><i class="fa-solid fa-hospital-user me-2"></i>SI-APOTEK</a>
+            <a class="navbar-brand fw-bold" href="/"><i class="fa-solid fa-hospital-user me-2"></i>SISTEM-APOTEK</a>
             <a href="/data" class="btn btn-light btn-sm fw-bold"><i class="fa-solid fa-table me-2"></i>Lihat Data Terdaftar</a>
         </div>
     </nav>
