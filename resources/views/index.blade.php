@@ -19,7 +19,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm py-3">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/"><i class="fa-solid fa-hospital-user me-2"></i>SISTEM-APOTEK</a>
+            <a class="navbar-brand fw-bold" href="/"><i class="fa-solid fa-hospital-user me-2"></i>SI-APOTEK</a>
             <a href="/data" class="btn btn-light btn-sm fw-bold"><i class="fa-solid fa-table me-2"></i>Lihat Data Terdaftar</a>
         </div>
     </nav>
@@ -174,10 +174,18 @@
                     });
                     formElement.reset();
                 } else {
-                    Swal.fire({'icon': 'error', 'title': 'Gagal!', 'text': JSON.stringify(result)});
+                    Swal.fire({
+                        icon: 'error', 
+                        title: 'Gagal!', 
+                        text: typeof result === 'object' ? JSON.stringify(result) : result
+                    });
                 }
             } catch (err) {
-                Swal.fire({'icon': 'error', 'title': 'Error!', 'text': 'Gagal terhubung ke server.'});
+                Swal.fire({
+                    icon: 'error', 
+                    title: 'Error!', 
+                    text: 'Gagal terhubung ke server API.'
+                });
             }
         }
 
@@ -209,4 +217,9 @@
                 kode_obat: document.getElementById('kode_obat').value,
                 nama_obat: document.getElementById('nama_obat').value,
                 stock_obat: document.getElementById('stock_obat').value,
-                tanggal_
+                tanggal_expired: document.getElementById('tanggal_expired').value
+            }, this);
+        });
+    </script>
+</body>
+</html>
